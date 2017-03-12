@@ -24,6 +24,13 @@ export class RecipeService {
     return this.recipes[id];
   }
 
+  addRecipe(recipe: Recipe){
+    this.recipes.push(recipe);
+  }
+
+  editRecipe(oldRecipe :Recipe, newRecipe: Recipe){
+    this.recipes[this.recipes.indexOf(oldRecipe)]= newRecipe;
+    }
   deleteRecipe(recipe :Recipe){
     this.recipes.splice(this.recipes.indexOf(recipe),1)
   }
